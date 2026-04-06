@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Website - Biodata</title>
+    <style>
+        /* CSS KONSISTEN (Sama dengan Index) */
+        :root {
+            --primary-green: #2d6a4f;
+            --light-green: #d8f3dc;
+            --accent-green: #40916c;
+            --dark-green: #1b4332;
+            --text-color: #1b4332;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-green);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: var(--primary-green);
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-green);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+        }
+
+        /* CSS KHUSUS TABEL BIODATA */
+        .table-biodata {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table-biodata tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .table-biodata td {
+            padding: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: var(--primary-green);
+            width: 30%;
+        }
+
+        .profile-img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--light-green);
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--dark-green);
+            color: var(--white);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Profil Pengguna</h1>
+        <p>Mengenal Lebih Dekat</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="galery.html">Gallery</a>
+        <a href="video.html">Video</a>
+    </nav>
+
+    <div class="container">
+        <h2>Biodata Diri</h2>
+        
+        <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+
+        <table class="table-biodata">
+            <tr>
+                <td class="label">Nama Lengkap</td>
+                <td>: Masukkan Nama Anda</td>
+            </tr>
+            <tr>
+                <td class="label">NIM</td>
+                <td>: 123456789</td>
+            </tr>
+            <tr>
+                <td class="label">Tempat, Tgl Lahir</td>
+                <td>: Jakarta, 01 Januari 2000</td>
+            </tr>
+            <tr>
+                <td class="label">Jurusan</td>
+                <td>: Teknik Informatika</td>
+            </tr>
+            <tr>
+                <td class="label">Hobi</td>
+                <td>: Coding, Membaca, Berkebun</td>
+            </tr>
+            <tr>
+                <td class="label">Email</td>
+                <td>: emailanda@student.ac.id</td>
+            </tr>
+            <tr>
+                <td class="label">Motto Hidup</td>
+                <td>: "Mulai dari hal kecil untuk dampak yang besar."</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nama Kamu - Tugas Web GitHub</p>
+    </footer>
+
+</body>
+</html>
