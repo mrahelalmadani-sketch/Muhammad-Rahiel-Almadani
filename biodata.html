@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Website - Biodata</title>
     <style>
-        /* CSS KONSISTEN (Sama dengan Index) */
+        /* CSS KONSISTEN DENGAN INDEX */
         :root {
             --primary-green: #2d6a4f;
             --light-green: #d8f3dc;
@@ -51,6 +51,7 @@
             background-color: var(--accent-green);
         }
 
+        /* KHUSUS HALAMAN BIODATA */
         .container {
             max-width: 800px;
             margin: 40px auto;
@@ -60,43 +61,38 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        h2 {
-            color: var(--primary-green);
+        .profile-header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 2px solid var(--light-green);
-            padding-bottom: 10px;
         }
 
-        /* CSS KHUSUS TABEL BIODATA */
-        .table-biodata {
+        .profile-header h2 {
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+
+        .info-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
 
-        .table-biodata tr {
+        .info-table tr {
             border-bottom: 1px solid #eee;
         }
 
-        .table-biodata td {
+        .info-table td {
             padding: 15px;
         }
 
         .label {
             font-weight: bold;
-            color: var(--primary-green);
+            color: var(--accent-green);
             width: 30%;
         }
 
-        .profile-img {
-            display: block;
-            margin: 0 auto 20px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid var(--light-green);
-            object-fit: cover;
+        .content {
+            color: #333;
         }
 
         footer {
@@ -111,8 +107,8 @@
 <body>
 
     <header>
-        <h1>Profil Pengguna</h1>
-        <p>Mengenal Lebih Dekat</p>
+        <h1>Profil Mahasiswa</h1>
+        <p>Mengenal Lebih Dekat Melalui Portofolio Digital</p>
     </header>
 
     <nav>
@@ -123,44 +119,41 @@
     </nav>
 
     <div class="container">
-        <h2>Biodata Diri</h2>
-        
-        <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+        <div class="profile-header">
+            <h2>Biodata Diri</h2>
+            <p>Informasi akademik dan kontak personal</p>
+        </div>
 
-        <table class="table-biodata">
+        <table class="info-table">
             <tr>
                 <td class="label">Nama Lengkap</td>
-                <td>: Masukkan Nama Anda</td>
+                <td class="content">Halimah</td>
             </tr>
             <tr>
                 <td class="label">NIM</td>
-                <td>: 123456789</td>
-            </tr>
-            <tr>
-                <td class="label">Tempat, Tgl Lahir</td>
-                <td>: Jakarta, 01 Januari 2000</td>
+                <td class="content">123456789 (Sesuaikan)</td>
             </tr>
             <tr>
                 <td class="label">Jurusan</td>
-                <td>: Teknik Informatika</td>
+                <td class="content">Kelautan dan Perikanan</td>
             </tr>
             <tr>
-                <td class="label">Hobi</td>
-                <td>: Coding, Membaca, Berkebun</td>
+                <td class="label">Minat Penelitian</td>
+                <td class="content">Mina Wisata & Sumber Daya Perikanan</td>
             </tr>
             <tr>
                 <td class="label">Email</td>
-                <td>: emailanda@student.ac.id</td>
+                <td class="content">halimah@email.com</td>
             </tr>
             <tr>
-                <td class="label">Motto Hidup</td>
-                <td>: "Mulai dari hal kecil untuk dampak yang besar."</td>
+                <td class="label">Keahlian</td>
+                <td class="content">Analisis Data Statistik (SPSS), Fluid Dynamics</td>
             </tr>
         </table>
     </div>
 
     <footer>
-        <p>&copy; 2024 Nama Kamu - Tugas Web GitHub</p>
+        <p>&copy; 2024 Halimah - Tugas Web GitHub</p>
     </footer>
 
 </body>
