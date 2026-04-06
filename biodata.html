@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Website - Biodata</title>
+    <style>
+        /* CSS KONSISTEN DENGAN INDEX */
+        :root {
+            --primary-green: #2d6a4f;
+            --light-green: #d8f3dc;
+            --accent-green: #40916c;
+            --dark-green: #1b4332;
+            --text-color: #1b4332;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-green);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: var(--primary-green);
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background-color: var(--accent-green);
+        }
+
+        /* KHUSUS HALAMAN BIODATA */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header h2 {
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .info-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-table td {
+            padding: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: var(--accent-green);
+            width: 30%;
+        }
+
+        .content {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--dark-green);
+            color: var(--white);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Profil Mahasiswa</h1>
+        <p>Mengenal Lebih Dekat Melalui Portofolio Digital</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="galery.html">Gallery</a>
+        <a href="video.html">Video</a>
+    </nav>
+
+    <div class="container">
+        <div class="profile-header">
+            <h2>Biodata Diri</h2>
+            <p>Informasi akademik dan kontak personal</p>
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <td class="label">Nama Lengkap</td>
+                <td class="content">Halimah</td>
+            </tr>
+            <tr>
+                <td class="label">NIM</td>
+                <td class="content">123456789 (Sesuaikan)</td>
+            </tr>
+            <tr>
+                <td class="label">Jurusan</td>
+                <td class="content">Kelautan dan Perikanan</td>
+            </tr>
+            <tr>
+                <td class="label">Minat Penelitian</td>
+                <td class="content">Mina Wisata & Sumber Daya Perikanan</td>
+            </tr>
+            <tr>
+                <td class="label">Email</td>
+                <td class="content">halimah@email.com</td>
+            </tr>
+            <tr>
+                <td class="label">Keahlian</td>
+                <td class="content">Analisis Data Statistik (SPSS), Fluid Dynamics</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Halimah - Tugas Web GitHub</p>
+    </footer>
+
+</body>
+</html>
