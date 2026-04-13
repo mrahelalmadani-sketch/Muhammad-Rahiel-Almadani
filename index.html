@@ -3,127 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Website - Home</title>
+    <title>Formulir Pendataan Demografi & Transaksi</title>
     <style>
-        /* CSS UNTUK TEMA GREEN */
-        :root {
-            --primary-green: #2d6a4f;
-            --light-green: #d8f3dc;
-            --accent-green: #40916c;
-            --dark-green: #1b4332;
-            --text-color: #1b4332;
-            --white: #ffffff;
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h2 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #333; margin-top: 30px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
+        input[type="text"], input[type="date"], input[type="tel"], input[type="email"], input[type="number"], select, textarea {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light-green);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--dark-green);
-            color: var(--white);
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        /* Navigasi */
-        nav {
-            background-color: var(--primary-green);
-            display: flex;
-            justify-content: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: var(--white);
-            text-decoration: none;
-            padding: 15px 25px;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-
-        nav a:hover {
-            background-color: var(--accent-green);
-        }
-
-        /* Konten Utama */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background: var(--white);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            min-height: 400px;
-        }
-
-        h2 {
-            color: var(--primary-green);
-            border-bottom: 2px solid var(--light-green);
-            padding-bottom: 10px;
-        }
-
-        .hero-section {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-green);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        .btn:hover {
-            background-color: var(--dark-green);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--dark-green);
-            color: var(--white);
-            margin-top: 50px;
-        }
+        /* Styling untuk tombol Jenis Transaksi */
+        .radio-group { display: flex; gap: 15px; }
+        .radio-group label { background: #e9ecef; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: normal; border: 1px solid #ccc; }
+        .radio-group input[type="radio"] { display: none; }
+        .radio-group input[type="radio"]:checked + label { background: #0056b3; color: white; border-color: #0056b3; }
+        
+        button[type="submit"] { background: #28a745; color: white; border: none; padding: 15px 20px; font-size: 16px; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 20px; }
+        button[type="submit"]:hover { background: #218838; }
+        #message { margin-top: 20px; padding: 10px; text-align: center; display: none; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>DANI_KTB</h1>
-       
-    </header>
+<div class="container">
+    <h1 style="text-align: center; color: #333;">Formulir Pendataan & Transaksi</h1>
+    
+    <form id="dataForm">
+        <h2>Data Demografi</h2>
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+        <div class="form-group">
+            <label for="tglLahir">Tanggal Lahir</label>
+            <input type="date" id="tglLahir" name="tglLahir" required>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat Lengkap</label>
+            <textarea id="alamat" name="alamat" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="telepon">Nomor Telepon</label>
+            <input type="tel" id="telepon" name="telepon" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="pendidikan">Tingkat Pendidikan</label>
+            <select id="pendidikan" name="pendidikan" required>
+                <option value="">-- Pilih Pendidikan --</option>
+                <option value="SD/Sederajat">SD/Sederajat</option>
+                <option value="SMP/Sederajat">SMP/Sederajat</option>
+                <option value="SMA/SMK/Sederajat">SMA/SMK/Sederajat</option>
+                <option value="D3">Diploma 3 (D3)</option>
+                <option value="S1/D4">Sarjana (S1/D4)</option>
+                <option value="S2">Magister (S2)</option>
+                <option value="S3">Doktor (S3)</option>
+            </select>
+        </div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="biodata.html">Biodata</a>
-        <a href="galery.html">Gallery</a>
-        <a href="video.html">Video</a>
-    </nav>
+        <h2>Data Bank</h2>
+        <div class="form-group">
+            <label for="bank">Nama Bank</label>
+            <select id="bank" name="bank" required>
+                <option value="">-- Pilih Bank --</option>
+                <option value="Bank Mandiri">Bank Mandiri</option>
+                <option value="Bank Rakyat Indonesia (BRI)">Bank Rakyat Indonesia (BRI)</option>
+                <option value="Bank Negara Indonesia (BNI)">Bank Negara Indonesia (BNI)</option>
+                <option value="Bank Central Asia (BCA)">Bank Central Asia (BCA)</option>
+                <option value="Bank Syariah Indonesia (BSI)">Bank Syariah Indonesia (BSI)</option>
+                <option value="Bank CIMB Niaga">Bank CIMB Niaga</option>
+                <option value="Lainnya">Lainnya...</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="rekening">Nomor Rekening</label>
+            <input type="number" id="rekening" name="rekening" required>
+        </div>
 
-    <div class="container">
-        <section class="hero-section">
-            <h2>Selamat Datang di Website Muhammad Rahiel Almadani</h2>
-            <a href="biodata.html" class="btn">Lihat Profil Saya</a>
-        </section>
-    </div>
+        <h2>Data Transaksi Keuangan</h2>
+        <div class="form-group">
+            <label for="tglTransaksi">Tanggal Transaksi</label>
+            <input type="date" id="tglTransaksi" name="tglTransaksi" required>
+        </div>
+        <div class="form-group">
+            <label for="uraian">Uraian Transaksi</label>
+            <input type="text" id="uraian" name="uraian" placeholder="Misal: Pembayaran iuran bulanan" required>
+        </div>
+        <div class="form-group">
+            <label>Jenis Transaksi</label>
+            <div class="radio-group">
+                <input type="radio" id="jenisDebet" name="jenisTransaksi" value="Debet" required>
+                <label for="jenisDebet">Uang Masuk (Debet)</label>
+                
+                <input type="radio" id="jenisKredit" name="jenisTransaksi" value="Kredit">
+                <label for="jenisKredit">Uang Keluar (Kredit)</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="debet">Nominal Debet (Rp) - Jika ada</label>
+            <input type="number" id="debet" name="debet" value="0" min="0">
+        </div>
+        <div class="form-group">
+            <label for="kredit">Nominal Kredit (Rp) - Jika ada</label>
+            <input type="number" id="kredit" name="kredit" value="0" min="0">
+        </div>
 
-    <footer>
-        
-    </footer>
+        <button type="submit" id="submitBtn">Kirim Data ke Sistem</button>
+    </form>
 
+    <div id="message"></div>
+</div>
+
+<script>
+    const scriptURL = 'MASUKKAN_URL_APPS_SCRIPT_ANDA_DISINI'; // <-- GANTI DENGAN URL DARI TAHAP 1
+    const form = document.getElementById('dataForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const messageDiv = document.getElementById('message');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Mengirim Data...';
+        messageDiv.style.display = 'none';
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                messageDiv.className = 'success';
+                messageDiv.innerText = 'Berhasil! Data telah tersimpan di Google Sheets.';
+                messageDiv.style.display = 'block';
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Kirim Data ke Sistem';
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                messageDiv.className = 'error';
+                messageDiv.innerText = 'Gagal mengirim data. Silakan coba lagi.';
+                messageDiv.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Kirim Data ke Sistem';
+            });
+    });
+</script>
 </body>
 </html>
